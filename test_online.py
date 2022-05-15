@@ -6,7 +6,7 @@ import os.path as op
 import torch
 
 # params
-url = 'http://60.19.58.86:20000/'
+url = 'http://115.27.161.37:77777/'
 token = 'qa_en'
 data_dir = 'squad_v2'
 features_file = op.join(data_dir, 'features_dev_384')

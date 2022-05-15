@@ -13,11 +13,11 @@ api_server_url = 'http://60.19.58.86:20000/'
 dev_dir = 'squad_v2/devset'
 
 
-class Ui_QADemoGui(object):
-    def setupUi(self, QADemoGui):
+class Ui_QAAppGui(object):
+    def setupUi(self, QAAppGui):
         # GUI Name & Default size
-        QADemoGui.setObjectName("QADemoGui")
-        QADemoGui.resize(1060, 860)
+        QAAppGui.setObjectName("QAAppGui")
+        QAAppGui.resize(1060, 860)
         # Static Variables
         self.api_server_url = api_server_url
         self.qa_token = 'qa_en'
@@ -33,7 +33,7 @@ class Ui_QADemoGui(object):
         self.total_correct = 0
         self.accuracy = "0%"
         # Btns & Events
-        self.centralwidget = QtWidgets.QWidget(QADemoGui)
+        self.centralwidget = QtWidgets.QWidget(QAAppGui)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
@@ -163,27 +163,27 @@ class Ui_QADemoGui(object):
         self.verticalLayout.setStretch(10, 1)
         self.verticalLayout.setStretch(12, 2)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
-        QADemoGui.setCentralWidget(self.centralwidget)
-        # self.statusbar = QtWidgets.QStatusBar(QADemoGui)
+        QAAppGui.setCentralWidget(self.centralwidget)
+        # self.statusbar = QtWidgets.QStatusBar(QAAppGui)
         # self.statusbar.setObjectName("statusbar")
-        # QADemoGui.setStatusBar(self.statusbar)
+        # QAAppGui.setStatusBar(self.statusbar)
 
-        self.retranslateUi(QADemoGui)
-        QtCore.QMetaObject.connectSlotsByName(QADemoGui)
+        self.retranslateUi(QAAppGui)
+        QtCore.QMetaObject.connectSlotsByName(QAAppGui)
 
-    def retranslateUi(self, QADemoGui):
+    def retranslateUi(self, QAAppGui):
         _translate = QtCore.QCoreApplication.translate
-        QADemoGui.setWindowTitle(_translate("QADemoGui", "QA Demo"))
-        self.load_data_and_predict_btn.setText(_translate("QADemoGui", "Load Random Sample From Dataset And Predict"))
-        self.context_label.setText(_translate("QADemoGui", "Context"))
-        self.question_label.setText(_translate("QADemoGui", "Question"))
-        self.predict_from_manual_input_btn.setText(_translate("QADemoGui", "Predict From Manual Input"))
-        self.predicted_answer_label.setText(_translate("QADemoGui", "Predicted Answer"))
-        self.time_cost_label.setText(_translate("QADemoGui", "Time Cost"))
-        self.answer_check_label.setText(_translate("QADemoGui", "Answer Check"))
-        self.predicted_samples_label.setText(_translate("QADemoGui", "Predicted Samples"))
-        self.accuracy_label.setText(_translate("QADemoGui", "Accuracy"))
-        self.golden_answer_label.setText(_translate("QADemoGui", "Golden Answer"))
+        QAAppGui.setWindowTitle(_translate("QAAppGui", "QA Demo"))
+        self.load_data_and_predict_btn.setText(_translate("QAAppGui", "Load Random Sample From Dataset And Predict"))
+        self.context_label.setText(_translate("QAAppGui", "Context"))
+        self.question_label.setText(_translate("QAAppGui", "Question"))
+        self.predict_from_manual_input_btn.setText(_translate("QAAppGui", "Predict From Manual Input"))
+        self.predicted_answer_label.setText(_translate("QAAppGui", "Predicted Answer"))
+        self.time_cost_label.setText(_translate("QAAppGui", "Time Cost"))
+        self.answer_check_label.setText(_translate("QAAppGui", "Answer Check"))
+        self.predicted_samples_label.setText(_translate("QAAppGui", "Predicted Samples"))
+        self.accuracy_label.setText(_translate("QAAppGui", "Accuracy"))
+        self.golden_answer_label.setText(_translate("QAAppGui", "Golden Answer"))
 
     def load_sample_and_predict(self):
         self.cur_data_file = random.choice(self.data_files)

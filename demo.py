@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from QADemoGui import Ui_QADemoGui
+from QAAppGui import Ui_QAAppGui
 
 style_files = {
     'white': 'qss/white.qss',
@@ -11,7 +11,7 @@ style_files = {
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     mainWindow = QMainWindow()
-    ui = Ui_QADemoGui()
+    ui = Ui_QAAppGui()
     ui.setupUi(mainWindow)
     # set qss style "黑色炫酷"
     theme = 'white'
